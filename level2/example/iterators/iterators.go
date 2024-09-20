@@ -27,7 +27,6 @@ func (lst *List[T]) Push(v T) {
 
 func (lst *List[T]) All() iter.Seq[T] {
 	return func(yield func(T) bool) {
-
 		for e := lst.head; e != nil; e = e.next {
 			if !yield(e.val) {
 				return
@@ -39,7 +38,6 @@ func (lst *List[T]) All() iter.Seq[T] {
 func genFib() iter.Seq[int] {
 	return func(yield func(int) bool) {
 		a, b := 1, 1
-
 		for {
 			if !yield(a) {
 				return
@@ -58,12 +56,10 @@ func Iterators() {
 	for e := range lst.All() {
 		fmt.Println(e)
 	}
-
 	all := slices.Collect(lst.All())
 	fmt.Println("all:", all)
 
 	for n := range genFib() {
-
 		if n >= 10 {
 			break
 		}

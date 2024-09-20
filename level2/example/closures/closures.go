@@ -13,7 +13,6 @@ func intSeq() func() int {
 func Closures() {
 
 	nextInt := intSeq()
-
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())

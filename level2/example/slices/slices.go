@@ -6,7 +6,6 @@ import (
 )
 
 func Slices() {
-
 	var s []string
 	fmt.Println("uninit:", s, s == nil, len(s) == 0)
 
@@ -18,7 +17,6 @@ func Slices() {
 	s[2] = "c"
 	fmt.Println("set:", s)
 	fmt.Println("get:", s[2])
-
 	fmt.Println("len:", len(s))
 
 	s = append(s, "d")

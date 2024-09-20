@@ -30,5 +30,5 @@ func main() {
 		v1.GET("/getd", model.GetDataD)
 	}
 	r.Use(middlewire.Logger())
-	r.Run() // 监听并在 0.0.0.0:8080 上启动服务
+	r.Run()
 }
